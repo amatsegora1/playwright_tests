@@ -35,7 +35,7 @@ export class RegistrationForm {
     this.logoutLink = page.locator('a', { hasText: 'Log out' });
   }
 
-  //Red border coloer function
+  //Red border color function
   async expectErrorBorder(locator: Locator) {
     await expect(locator).toHaveCSS('border-color', this.errorBorderColor);
   }
