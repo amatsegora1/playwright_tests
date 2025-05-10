@@ -17,6 +17,7 @@ export class RegistrationForm {
   readonly logoutLink: Locator;
   readonly errorBorderColor = 'rgb(220, 53, 69)';
 
+  //Locators identifiers
   constructor(page: Page) {
     this.page = page;
     this.signUpButton = page.locator('.hero-descriptor button.btn-primary');
@@ -34,10 +35,12 @@ export class RegistrationForm {
     this.logoutLink = page.locator('a', { hasText: 'Log out' });
   }
 
+  //Red border coloer function
   async expectErrorBorder(locator: Locator) {
     await expect(locator).toHaveCSS('border-color', this.errorBorderColor);
   }
 
+  //Unique email generator
   generateUniqueEmail(): string {
     const random = Math.floor(Math.random() * 100000);
     return `test${random}@example.com`;
