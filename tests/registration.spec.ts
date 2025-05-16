@@ -6,7 +6,7 @@ test.describe('Registration form validation', () => {
 
     test.beforeEach(async ({page}) => {
         form = new RegistrationForm(page);
-        await page.goto ('https://guest:welcome2qauto@qauto.forstudy.space');
+        await page.goto ('/');
         await form.signUpButton.click();
     })
 
