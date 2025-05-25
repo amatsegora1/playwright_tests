@@ -20,3 +20,6 @@ Thumbs.db
 
 # Env
 .env
+
+# Playwright storage state
+storage/
