@@ -6,4 +6,4 @@ COPY . .
 
 RUN npm ci
 
-CMD ["npx", "playwright", "test", "tests/login.spec.ts"]
+CMD ["npx", "playwright", "test", "tests/registration.spec.ts"]
